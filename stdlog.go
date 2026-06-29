@@ -10,9 +10,9 @@ import (
 
 const (
 	message = "the standard log package is forbidden; use log/slog for structured logging"
-	// stdLogPath is the quoted import path of the standard log package, as it
-	// appears in an ast.ImportSpec's Path.Value.
-	stdLogPath = `"log"`
+	// stdLogPath is the import path of the standard log package, as it appears
+	// once an ast.ImportSpec's quoted Path.Value has been decoded.
+	stdLogPath = "log"
 )
 
 // Analyzer reports imports of the standard "log" package.
@@ -34,7 +34,7 @@ var Registration = goyze.Registration{
 func run(pass *analysis.Pass) (any, error) {
 	for _, file := range pass.Files {
 		for _, imp := range file.Imports {
-			if imp.Path.Value == stdLogPath {
+			if importsLog(importPathLiteral(imp.Path.Value)) {
 				pass.Reportf(imp.Pos(), message)
 			}
 		}

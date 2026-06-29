@@ -1,7 +1,7 @@
 package a
 
 import (
-	"log"      // want `standard log package`
+	"log" // want `standard log package`
 	"log/slog"
 )
 
