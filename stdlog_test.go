@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/tools/go/analysis/analysistest"
 
-	stdlog "github.com/gomatic/yze-stdlog"
+	stdlog "github.com/gomatic/yze-go-stdlog"
 )
 
 func TestStandardLogImportIsReported(t *testing.T) {
