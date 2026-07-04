@@ -1,8 +1,6 @@
-# yze-go-stdlog
+[![actions](https://github.com/gomatic/yze-go-stdlog/actions/workflows/actions.yml/badge.svg)](https://github.com/gomatic/yze-go-stdlog/actions/workflows/actions.yml)
+[![docs](https://github.com/gomatic/yze-go-stdlog/actions/workflows/docs.yml/badge.svg)](https://github.com/gomatic/yze-go-stdlog/actions/workflows/docs.yml)
+[![go](https://github.com/gomatic/yze-go-stdlog/actions/workflows/go.yml/badge.svg)](https://github.com/gomatic/yze-go-stdlog/actions/workflows/go.yml)
+[![release](https://github.com/gomatic/yze-go-stdlog/actions/workflows/release.yml/badge.svg)](https://github.com/gomatic/yze-go-stdlog/actions/workflows/release.yml)
 
-A [`yze`](https://github.com/gomatic/yze) analyzer (category `data`) enforcing the gomatic Go logging standard: the standard library `log` package is forbidden in favor of structured logging with `log/slog`.
-
-- **Rule:** `yze/stdlog`
-- **Binary:** `cmd/yze-go-stdlog` runs it standalone.
-
-Built on the [`go-yze`](https://github.com/gomatic/go-yze) framework.
+[docs](https://gomatic.github.io/docs.yze-go-stdlog/)
