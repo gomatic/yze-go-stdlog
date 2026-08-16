@@ -22,10 +22,13 @@ var Analyzer = &analysis.Analyzer{
 	Run:  run,
 }
 
-// Registration declares this analyzer to the yze framework.
+// Registration declares this analyzer to the yze framework. The category is
+// "logging", shared with yze/slogkv, so narrowing a run to the logging standard
+// yields the whole standard rather than half of it; "data" was this rule's tag
+// until then and named the wrong subject — it is jsontag's, about serialization.
 var Registration = goyze.Registration{
 	Name:       "stdlog",
-	Categories: []goyze.Category{"data"},
+	Categories: []goyze.Category{"logging"},
 	URL:        "https://docs.gomatic.dev/yze/stdlog",
 	Analyzer:   Analyzer,
 }
